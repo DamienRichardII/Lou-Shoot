@@ -84,7 +84,7 @@
 
     .portal-row {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 3px;
       align-items: stretch;
       padding-top: 0;
@@ -93,8 +93,8 @@
     .portal {
       position: relative;
       width: 100%;
-      height: 88svh;
-      min-height: 600px;
+      height: 82svh;
+      min-height: 540px;
       overflow: hidden;
       display: block;
       text-decoration: none;
@@ -108,7 +108,7 @@
       z-index: 0;
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       object-position: center center;
       display: block;
       transition: transform 1.6s var(--ease);
@@ -167,9 +167,13 @@
     .ft-logo { font-family:var(--serif); font-weight:300; font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:var(--grey); }
     .ft-copy { font-family:var(--sans); font-size:9px; letter-spacing:.18em; color:var(--grey); }
 
+    
+    @media (max-width: 1400px) {
+      .portal-row { grid-template-columns: repeat(2, 1fr); }
+    }
     @media (max-width: 1100px) {
       .portal-row { grid-template-columns: 1fr; }
-      .portal { height: 72svh; min-height: 500px; }
+      .portal { height: 66svh; min-height: 440px; }
     }
 
     @media (max-width:768px) {
@@ -179,7 +183,7 @@
       .hero-scroll { right:24px; }
       .portal-content { padding:0 24px 40px; }
       .portal-index { top:28px; right:24px; }
-      .portal { height: 68svh; min-height: 440px; }
+      .portal { height: 62svh; min-height: 400px; }
       footer { padding:24px 20px; flex-direction:column; gap:12px; }
     }
   </style>
@@ -214,7 +218,7 @@
         <source src="assets/sections/brand/section-entry/Couv.MOV" />
       </video>
       <div class="portal-overlay"></div>
-      <span class="portal-index">01 / 03</span>
+      <span class="portal-index">01 / 04</span>
       <div class="portal-content">
         <div>
           <h2 class="portal-title">Brands</h2>
@@ -228,7 +232,7 @@
         <source src="assets/sections/editorial/section-entry/Couverture.MP4" type="video/mp4" />
       </video>
       <div class="portal-overlay"></div>
-      <span class="portal-index">02 / 03</span>
+      <span class="portal-index">02 / 04</span>
       <div class="portal-content">
         <div>
           <h2 class="portal-title">Editorial</h2>
@@ -237,10 +241,24 @@
       </div>
     </a>
 
+    <a href="personnal-project.html" class="portal" id="portal-personal">
+      <video class="portal-media" autoplay muted loop playsinline preload="auto">
+        <source src="assets/sections/personal-project/COUV.MOV" type="video/quicktime" />
+      </video>
+      <div class="portal-overlay"></div>
+      <span class="portal-index">03 / 04</span>
+      <div class="portal-content">
+        <div>
+          <h2 class="portal-title">Personal Project</h2>
+        </div>
+        <span class="portal-enter">Enter &nbsp;→</span>
+      </div>
+    </a>
+
     <a href="contact.html" class="portal" id="portal-contact">
       <img class="portal-media" src="assets/sections/contact/section-entry/COUV.jpg" alt="Contact" />
       <div class="portal-overlay"></div>
-      <span class="portal-index">03 / 03</span>
+      <span class="portal-index">04 / 04</span>
       <div class="portal-content">
         <div>
           <h2 class="portal-title">Contact</h2>

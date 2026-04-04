@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Fetcha — Lou Shoot</title>
+  <title>Fetcha — LouShoot</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Syne:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{--black:#080808;--dark:#161616;--surface:#1E1E1E;--line:#2A2A2A;--grey:#5A5A5A;--white:#F0EBE3;--white-dim:#9A9390;--accent:#C2A882;--serif:'Cormorant',Georgia,serif;--sans:'Syne',sans-serif;--ease:cubic-bezier(.25,.1,.25,1);--ease-out:cubic-bezier(0,0,.2,1)}
+    :root{--black:#000000;--dark:#070707;--surface:#101010;--line:#1A1A1A;--grey:#7A7A7A;--white:#F4F4F4;--white-dim:#A6A6A6;--accent:#C2A882;--serif:'Cormorant',Georgia,serif;--sans:'Syne',sans-serif;--ease:cubic-bezier(.25,.1,.25,1)}
     html{background:var(--black);color:var(--white);font-family:var(--sans);cursor:none}body{background:var(--black);overflow-x:hidden}
     #noise{position:fixed;inset:0;pointer-events:none;z-index:9000;opacity:.032;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
     #cursor-dot{position:fixed;width:5px;height:5px;background:var(--white);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%)}
@@ -19,18 +19,18 @@
     .nav-back{font-family:var(--sans);font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--white-dim);text-decoration:none;cursor:none;display:flex;align-items:center;gap:10px;transition:color .4s}
     .nav-back:hover{color:var(--white)}
     .proj-hero{width:100%;height:100svh;min-height:560px;position:relative;overflow:hidden}
-    .proj-hero img,.proj-hero .ph{width:100%;height:100%;object-fit:cover;display:block;background:var(--dark)}
+    .proj-hero img{width:100%;height:100%;object-fit:cover;display:block}
     .proj-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.9) 0%,rgba(8,8,8,.15) 45%,transparent 65%)}
     .proj-hero-content{position:absolute;bottom:0;left:0;padding:0 48px 60px;z-index:2}
     .proj-category{font-family:var(--sans);font-size:9px;letter-spacing:.35em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
     .proj-title{font-family:var(--serif);font-size:clamp(42px,7vw,88px);font-weight:300;letter-spacing:.05em;line-height:.92;color:var(--white)}
-    .proj-banner{width:100%;aspect-ratio:16/7;overflow:hidden;margin:3px 0;background:var(--dark)}
-    .proj-banner img,.proj-banner .ph{width:100%;height:100%;object-fit:cover;display:block;background:var(--surface)}
+    .proj-banner{width:100%;aspect-ratio:16/7;overflow:hidden;margin:3px 0}
+    .proj-banner img{width:100%;height:100%;object-fit:cover;display:block}
     .proj-desc{padding:60px 48px;max-width:700px}
     .proj-desc p{font-family:var(--serif);font-size:clamp(15px,1.4vw,18px);font-weight:300;font-style:italic;line-height:1.8;color:var(--white-dim)}
     .proj-gallery{display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:0 0 3px}
     .gal-item{aspect-ratio:4/5;overflow:hidden;background:var(--dark)}
-    .gal-item img,.gal-item .ph{width:100%;height:100%;object-fit:cover;display:block;background:var(--surface)}
+    .gal-item img{width:100%;height:100%;object-fit:cover;display:block}
     .gal-item:nth-child(2){margin-top:60px}
     .proj-footer{padding:40px 48px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}
     .pf-logo{font-family:var(--serif);font-weight:300;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
@@ -42,12 +42,11 @@
 <body>
   <div id="noise"></div><div id="cursor-dot"></div><div id="cursor-ring"></div>
   <nav id="navbar">
-    <a href="../index.html" class="nav-logo">Lou Shoot</a>
-    <a href="../brand.html" class="nav-back"><svg width="20" height="8" viewBox="0 0 20 8" fill="none"><line x1="20" y1="4" x2="3" y2="4" stroke="currentColor" stroke-width=".8"/><polyline points="6,1 1,4 6,7" fill="none" stroke="currentColor" stroke-width=".8"/></svg>Brand</a>
+    <a href="../index.html" class="nav-logo">LouShoot</a>
+    <a href="../brand.html" class="nav-back"><svg width="20" height="8" viewBox="0 0 20 8" fill="none"><line x1="20" y1="4" x2="3" y2="4" stroke="currentColor" stroke-width=".8"/><polyline points="6,1 1,4 6,7" fill="none" stroke="currentColor" stroke-width=".8"/></svg>Brands</a>
   </nav>
   <div class="proj-hero">
-    <!-- ▶ <img src="../assets/sections/brand/fetcha/couv.jpg" alt="Fetcha"/> -->
-    <div class="ph"></div>
+    <img src="../assets/sections/brand/fetcha/banniere.jpg" alt="YYB"/>
     <div class="proj-hero-overlay"></div>
     <div class="proj-hero-content">
       <p class="proj-category">Brand · Lookbook</p>
@@ -55,20 +54,18 @@
     </div>
   </div>
   <div class="proj-banner">
-    <!-- ▶ <img src="../assets/sections/brand/fetcha/banniere.jpg" alt="Fetcha — bannière"/> -->
-    <div class="ph"></div>
+    <img src="../assets/sections/brand/fetcha/couv.jpg" alt="YYB — bannière"/>
   </div>
-  <div class="proj-desc"><p>A lookbook built on contrast — raw material, refined light, and a visual grammar that speaks for the collection.</p></div>
+  <div class="proj-desc"><p>A clean brand story for Fetcha, combining silhouette, posture and everyday elegance in a restrained visual direction.</p></div>
   <div class="proj-gallery">
-    <!-- ▶ photo-01.jpg à photo-04.jpg depuis assets/sections/brand/fetcha/ -->
-    <div class="gal-item"><div class="ph"></div></div>
-    <div class="gal-item"><div class="ph"></div></div>
-    <div class="gal-item"><div class="ph"></div></div>
-    <div class="gal-item"><div class="ph"></div></div>
+    <div class="gal-item"><img src="../assets/sections/brand/fetcha/1.jpg" alt="Fetcha image 1"/></div>
+    <div class="gal-item"><img src="../assets/sections/brand/fetcha/2.jpg" alt="Fetcha image 2"/></div>
+    <div class="gal-item"><img src="../assets/sections/brand/fetcha/3.jpg" alt="Fetcha image 3"/></div>
+    <div class="gal-item"><img src="../assets/sections/brand/fetcha/4.jpg" alt="Fetcha image 4"/></div>
   </div>
   <footer class="proj-footer">
-    <span class="pf-logo">Lou Shoot</span>
-    <a href="../brand.html" class="pf-back">← Back to Brand</a>
+    <span class="pf-logo">LouShoot</span>
+    <a href="../brand.html" class="pf-back">← Back to Brands</a>
   </footer>
   <script>
     const dot=document.getElementById('cursor-dot'),ring=document.getElementById('cursor-ring');let mx=0,my=0,rx=0,ry=0;
