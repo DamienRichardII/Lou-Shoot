@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LouShoot — Photography & Art Direction</title>
+  <title>Lou Shoot — Photography & Art Direction</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Syne:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -11,12 +11,12 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --black:    #080808;
-      --dark:     #161616;
-      --line:     #2A2A2A;
-      --grey:     #5A5A5A;
-      --white:    #F0EBE3;
-      --white-dim:#9A9390;
+      --black:    #000000;
+      --dark:     #070707;
+      --line:     #1A1A1A;
+      --grey:     #7A7A7A;
+      --white:    #F4F4F4;
+      --white-dim:#A6A6A6;
       --accent:   #C2A882;
       --serif:    'Cormorant', Georgia, serif;
       --sans:     'Syne', sans-serif;
@@ -58,7 +58,7 @@
       width: 100%; height: 100svh; min-height: 600px;
       overflow: hidden;
       display: flex; align-items: flex-end;
-      border-bottom: 1px solid var(--line);
+      border-bottom: 0;
     }
     .hero-bg {
       position: absolute;
@@ -76,7 +76,7 @@
     }
     .hero-content { position:relative; z-index:2; padding:0 48px 64px; }
     .hero-name { font-family:var(--serif); font-size:clamp(56px,9vw,120px); font-weight:300; letter-spacing:.04em; line-height:.92; color:var(--white); display:block; white-space:nowrap; }
-    .hero-sub  { margin-top:22px; font-family:var(--sans); font-size:10px; letter-spacing:.38em; text-transform:uppercase; color:var(--white-dim); }
+    .hero-sub  { margin-top:0; font-family:var(--sans); font-size:10px; letter-spacing:.38em; text-transform:uppercase; color:var(--white-dim); }
     .hero-scroll { position:absolute; bottom:40px; right:48px; z-index:2; display:flex; flex-direction:column; align-items:center; gap:12px; }
     .hero-scroll span { font-family:var(--sans); font-size:8px; letter-spacing:.3em; text-transform:uppercase; color:var(--grey); writing-mode:vertical-rl; }
     .scroll-line { width:1px; height:48px; background:linear-gradient(to bottom,var(--grey),transparent); animation:pulse 2.2s ease-in-out infinite; }
@@ -87,14 +87,14 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 3px;
       align-items: stretch;
-      padding-top: 3px;
+      padding-top: 0;
     }
 
     .portal {
       position: relative;
       width: 100%;
-      height: 82svh;
-      min-height: 560px;
+      height: 88svh;
+      min-height: 600px;
       overflow: hidden;
       display: block;
       text-decoration: none;
@@ -196,11 +196,10 @@
 
   <section id="hero">
     <video class="hero-bg" autoplay muted loop playsinline preload="auto">
-      <source src="assets/hero/BANNIERE.mp4" type="video/mp4" />
+      <source src="assets/hero/PJ1.MOV" type="video/quicktime" />
     </video>
     <div class="hero-vignette"></div>
     <div class="hero-content">
-      <span class="hero-name reveal">LouShoot</span>
       <p class="hero-sub reveal rd2">Photography &nbsp;·&nbsp; Art Direction</p>
     </div>
     <div class="hero-scroll">
@@ -218,8 +217,7 @@
       <span class="portal-index">01 / 03</span>
       <div class="portal-content">
         <div>
-          <span class="portal-num">Brand</span>
-          <h2 class="portal-title">Brand</h2>
+          <h2 class="portal-title">Brands</h2>
         </div>
         <span class="portal-enter">Enter &nbsp;→</span>
       </div>
@@ -233,7 +231,6 @@
       <span class="portal-index">02 / 03</span>
       <div class="portal-content">
         <div>
-          <span class="portal-num">Editorial</span>
           <h2 class="portal-title">Editorial</h2>
         </div>
         <span class="portal-enter">Enter &nbsp;→</span>
@@ -246,7 +243,6 @@
       <span class="portal-index">03 / 03</span>
       <div class="portal-content">
         <div>
-          <span class="portal-num">Contact</span>
           <h2 class="portal-title">Contact</h2>
         </div>
         <span class="portal-enter">Enter &nbsp;→</span>
