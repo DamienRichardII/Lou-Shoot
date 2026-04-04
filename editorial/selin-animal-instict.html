@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Selin — Animal Instinct — Lou Shoot</title>
+  <title>Selin — Animal Instinct — LouShoot</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Syne:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
@@ -18,7 +18,6 @@
     .nav-logo{font-family:var(--serif);font-weight:300;font-size:16px;letter-spacing:.25em;text-transform:uppercase;color:var(--white);text-decoration:none;cursor:none}
     .nav-back{font-family:var(--sans);font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--white-dim);text-decoration:none;cursor:none;display:flex;align-items:center;gap:10px;transition:color .4s}
     .nav-back:hover{color:var(--white)}
-    /* Magazine hero — image + text side by side */
     .ed-hero{width:100%;min-height:100svh;display:grid;grid-template-columns:1fr 1fr;position:relative}
     .ed-hero-img{position:relative;overflow:hidden;min-height:100svh}
     .ed-hero-img img,.ed-hero-img .ph{width:100%;height:100%;object-fit:cover;display:block;background:var(--dark)}
@@ -26,10 +25,8 @@
     .ed-issue{font-family:var(--sans);font-size:9px;letter-spacing:.35em;text-transform:uppercase;color:var(--accent);margin-bottom:20px}
     .ed-title{font-family:var(--serif);font-size:clamp(32px,4.5vw,58px);font-weight:300;letter-spacing:.04em;line-height:1;color:var(--white);margin-bottom:28px}
     .ed-desc{font-family:var(--serif);font-size:clamp(14px,1.3vw,17px);font-weight:300;font-style:italic;line-height:1.8;color:var(--white-dim);max-width:380px}
-    /* Bannière pleine largeur */
     .ed-banner{width:100%;aspect-ratio:21/9;overflow:hidden;margin:3px 0;background:var(--dark)}
     .ed-banner img,.ed-banner .ph{width:100%;height:100%;object-fit:cover;display:block;background:var(--surface)}
-    /* Gallery */
     .ed-gallery{display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:0 0 3px}
     .ed-gallery .gi{aspect-ratio:4/5;overflow:hidden;background:var(--dark)}
     .ed-gallery .gi img,.ed-gallery .gi .ph{width:100%;height:100%;object-fit:cover;display:block;background:var(--surface)}
@@ -39,36 +36,36 @@
     .pf-logo{font-family:var(--serif);font-weight:300;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
     .pf-back{font-family:var(--sans);font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--grey);text-decoration:none;cursor:none;transition:color .4s}
     .pf-back:hover{color:var(--white)}
-    @media(max-width:768px){nav,nav.scrolled{padding:20px 24px}.ed-hero{grid-template-columns:1fr;min-height:auto}.ed-hero-img{min-height:70svh}.ed-hero-text{padding:40px 24px 48px}.ed-gallery{grid-template-columns:1fr}.ed-gallery .gi:nth-child(2){margin-top:0}.ed-gallery .gi.full{aspect-ratio:4/3}.proj-footer{padding:28px 20px;flex-direction:column;gap:12px}}
+    @media(max-width:768px){nav,nav.scrolled{padding:20px 24px}.ed-hero{grid-template-columns:1fr}.ed-hero-img{min-height:60svh}.ed-hero-text{padding:48px 24px}.ed-gallery{grid-template-columns:1fr}.ed-gallery .gi:nth-child(2){margin-top:0}.ed-gallery .gi.full{grid-column:auto;aspect-ratio:4/5}.proj-footer{padding:28px 20px;flex-direction:column;gap:12px}}
   </style>
 </head>
 <body>
   <div id="noise"></div><div id="cursor-dot"></div><div id="cursor-ring"></div>
   <nav id="navbar">
-    <a href="../index.html" class="nav-logo">Lou Shoot</a>
+    <a href="../index.html" class="nav-logo">LouShoot</a>
     <a href="../editorial.html" class="nav-back"><svg width="20" height="8" viewBox="0 0 20 8" fill="none"><line x1="20" y1="4" x2="3" y2="4" stroke="currentColor" stroke-width=".8"/><polyline points="6,1 1,4 6,7" fill="none" stroke="currentColor" stroke-width=".8"/></svg>Editorial</a>
   </nav>
   <div class="ed-hero">
     <div class="ed-hero-img">
-      <img src="../assets/sections/editorial/selin-animal-instict/COUV.jpg" alt="Selin Animal Instict"/>
+      <img src="../assets/sections/editorial/selin-animal-instict/COUV.jpg" alt="Selin — Animal Instinct"/>
     </div>
     <div class="ed-hero-text">
       <p class="ed-issue">Portrait Series</p>
       <h1 class="ed-title">Selin — Animal Instinct</h1>
-      <p class="ed-desc">Instinct before reason. A portrait series where the body speaks louder than any word.</p>
+      <p class="ed-desc">Instinct, gaze and tension. A portrait-led story where attitude becomes a visual language of its own.</p>
     </div>
   </div>
   <div class="ed-banner">
-    <img src="../assets/sections/editorial/selin-animal-instict/Banniere.jpg" alt="Selin Animal Instict banner"/>
+    <img src="../assets/sections/editorial/selin-animal-instict/Banniere.jpg" alt="Selin — Animal Instinct banner"/>
   </div>
   <div class="ed-gallery">
-    <div class="gi"><img src="../assets/sections/editorial/selin-animal-instict/1L8A5817.jpg" alt="Selin Animal Instict image 1" /></div>
-    <div class="gi"><img src="../assets/sections/editorial/selin-animal-instict/1L8A5785.jpg" alt="Selin Animal Instict image 2" /></div>
-    <div class="gi"><img src="../assets/sections/editorial/selin-animal-instict/138.jpg" alt="Selin Animal Instict image 3" /></div>
-    <div class="gi"><img src="../assets/sections/editorial/selin-animal-instict/139.jpg" alt="Selin Animal Instict image 4" /></div>
+    <div class="gi"><img src="../assets/sections/editorial/selin-animal-instict/1L8A5817.jpg" alt="Selin — Animal Instinct image 1" /></div>
+    <div class="gi"><img src="../assets/sections/editorial/selin-animal-instict/1L8A5785.jpg" alt="Selin — Animal Instinct image 2" /></div>
+    <div class="gi"><img src="../assets/sections/editorial/selin-animal-instict/138.jpg" alt="Selin — Animal Instinct image 3" /></div>
+    <div class="gi"><img src="../assets/sections/editorial/selin-animal-instict/139.jpg" alt="Selin — Animal Instinct image 4" /></div>
   </div>
   <footer class="proj-footer">
-    <span class="pf-logo">Lou Shoot</span>
+    <span class="pf-logo">LouShoot</span>
     <a href="../editorial.html" class="pf-back">← Back to Editorial</a>
   </footer>
   <script>
