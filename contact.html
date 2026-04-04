@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Lou Shoot</title>
+  <title>Contact — LouShoot</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Syne:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -24,18 +24,15 @@
     .nav-back{font-family:var(--sans);font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--white-dim);text-decoration:none;cursor:none;display:flex;align-items:center;gap:10px;transition:color .4s}
     .nav-back:hover{color:var(--white)}
 
-    /* Hero image — full width */
     .contact-hero{width:100%;height:80svh;min-height:500px;position:relative;overflow:hidden;margin-top:0}
-    .contact-hero img,.contact-hero .ph{width:100%;height:100%;object-fit:cover;display:block;background:var(--dark)}
+    .contact-hero img,.contact-hero .ph{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block;background:var(--dark)}
     .contact-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.85) 0%,rgba(8,8,8,.1) 55%,transparent 75%)}
 
-    /* Gallery strip */
     .contact-gallery{display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:3px}
     .cg-item{aspect-ratio:4/5;overflow:hidden;background:var(--dark)}
     .cg-item img,.cg-item .ph{width:100%;height:100%;object-fit:cover;display:block;background:var(--surface)}
     .cg-item:nth-child(2){margin-top:60px}
 
-    /* Contact block */
     .contact-block{padding:80px 48px 120px;display:flex;flex-direction:column;align-items:center;text-align:center;border-top:1px solid var(--line)}
     .contact-eyebrow{font-family:var(--sans);font-size:9px;letter-spacing:.38em;text-transform:uppercase;color:var(--grey);margin-bottom:28px}
     .contact-title{font-family:var(--serif);font-size:clamp(40px,6vw,78px);font-weight:300;letter-spacing:.06em;line-height:1;color:var(--white);margin-bottom:56px}
@@ -70,33 +67,30 @@
   <div id="cursor-ring"></div>
 
   <nav id="navbar">
-    <a href="index.html" class="nav-logo">Lou Shoot</a>
+    <a href="index.html" class="nav-logo">LouShoot</a>
     <a href="index.html" class="nav-back">
       <svg width="20" height="8" viewBox="0 0 20 8" fill="none"><line x1="20" y1="4" x2="3" y2="4" stroke="currentColor" stroke-width=".8"/><polyline points="6,1 1,4 6,7" fill="none" stroke="currentColor" stroke-width=".8"/></svg>
       Home
     </a>
   </nav>
 
-  <!-- Hero image -->
   <div class="contact-hero">
-    <img src="assets/sections/contact/section-entry/COUV.jpg" alt="Lou Shoot" />
+    <img src="assets/sections/contact/section-entry/COUV%20.jpg" alt="LouShoot" />
     <div class="contact-hero-overlay"></div>
   </div>
 
-  <!-- Gallery -->
   <div class="contact-gallery">
     <div class="cg-item reveal rd1">
-      <img src="assets/sections/contact/gallery/_A propos de moi_.HEIC" alt="" />
+      <img src="assets/sections/contact/gallery/_A%20propos%20de%20moi_%20.jpg" alt="LouShoot portrait" />
     </div>
     <div class="cg-item reveal rd2">
-      <img src="assets/sections/contact/gallery/supplémentaire .HEIC" alt="" />
+      <img src="assets/sections/contact/gallery/suppl%C3%A9mentaire%20.jpg" alt="LouShoot portrait" />
     </div>
   </div>
 
-  <!-- Contact block -->
   <div class="contact-block">
     <p class="contact-eyebrow reveal">Get in touch</p>
-    <h1 class="contact-title reveal rd1">Lou Shoot</h1>
+    <h1 class="contact-title reveal rd1">LouShoot</h1>
 
     <div class="contact-links reveal rd2">
       <a href="https://www.instagram.com/lou.shoot/" target="_blank" rel="noopener" class="contact-link">
@@ -113,21 +107,13 @@
         <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         <span>Facebook</span>
       </a>
-      <!--
-        ▶ Email — décommenter quand disponible :
-        <div class="contact-sep"></div>
-        <a href="mailto:contact@loushot.com" class="contact-link">
-          <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-          <span>contact@loushot.com</span>
-        </a>
-      -->
     </div>
 
     <p class="contact-email-note reveal rd3">— email available upon request —</p>
   </div>
 
   <footer>
-    <span class="ft-logo">Lou Shoot</span>
+    <span class="ft-logo">LouShoot</span>
     <span class="ft-copy">© 2025 — All rights reserved</span>
   </footer>
 

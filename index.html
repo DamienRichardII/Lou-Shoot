@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lou Shoot — Photography & Art Direction</title>
+  <title>LouShoot — Photography & Art Direction</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Syne:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -79,42 +79,49 @@
                   linear-gradient(to right, rgba(8,8,8,.4) 0%, transparent 55%);
     }
     .hero-content { position:relative; z-index:2; padding:0 48px 64px; }
-    .hero-name { font-family:var(--serif); font-size:clamp(56px,9vw,120px); font-weight:300; letter-spacing:.04em; line-height:.92; color:var(--white); display:block; }
+    .hero-name { font-family:var(--serif); font-size:clamp(56px,9vw,120px); font-weight:300; letter-spacing:.04em; line-height:.92; color:var(--white); display:block; white-space:nowrap; }
     .hero-sub  { margin-top:22px; font-family:var(--sans); font-size:10px; letter-spacing:.38em; text-transform:uppercase; color:var(--white-dim); }
     .hero-scroll { position:absolute; bottom:40px; right:48px; z-index:2; display:flex; flex-direction:column; align-items:center; gap:12px; }
-    .hero-scroll span { font-family:var(--sans); font-size:8px; letter-spacing:.3em; text-transform:uppercase; color:var(--grey-mid); writing-mode:vertical-rl; color:var(--grey); }
+    .hero-scroll span { font-family:var(--sans); font-size:8px; letter-spacing:.3em; text-transform:uppercase; color:var(--grey); writing-mode:vertical-rl; }
     .scroll-line { width:1px; height:48px; background:linear-gradient(to bottom,var(--grey),transparent); animation:pulse 2.2s ease-in-out infinite; }
     @keyframes pulse { 0%,100%{opacity:.3;transform:scaleY(.6) translateY(-4px)} 50%{opacity:1;transform:scaleY(1) translateY(4px)} }
 
+    /* ── PORTAL ROW ──────────────────────────────────────────────── */
+    .portal-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 3px;
+      align-items: stretch;
+      padding-top: 3px;
+    }
+
     /* ── SECTION PORTALS ─────────────────────────────────────────── */
-    /*
-      Each portal = full-screen video.
-      The VIDEO itself is the clickable CTA — no buttons.
-      cursor:none + body.ch give the hover feedback on the ring.
-    */
     .portal {
       position: relative;
-      width: 100%; height: 100svh; min-height: 600px;
+      width: 100%;
+      height: 82svh;
+      min-height: 560px;
       overflow: hidden;
       display: block;
       text-decoration: none;
       cursor: none;
-      border-bottom: 1px solid var(--line);
+      background: var(--dark);
     }
 
     .portal-media {
-      position: absolute; inset: 0; z-index: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center center;
       display: block;
       transition: transform 1.6s var(--ease);
+      background: var(--dark);
     }
-    .portal-media.ph { background: var(--dark); }
-    .portal-brand-ph    { background: linear-gradient(145deg, #110F0D 0%, #1c1916 100%); }
-    .portal-editorial-ph{ background: linear-gradient(145deg, #0D0F12 0%, #161820 100%); }
-    .portal-contact-ph  { background: linear-gradient(145deg, #0F0D0F 0%, #1a1620 100%); }
 
-    .portal:hover .portal-media { transform: scale(1.025); }
+    .portal:hover .portal-media { transform: scale(1.02); }
 
     .portal-overlay {
       position: absolute; inset: 0; z-index: 1;
@@ -169,6 +176,16 @@
     .ft-copy { font-family:var(--sans); font-size:9px; letter-spacing:.18em; color:var(--grey); }
 
     /* ── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 1100px) {
+      .portal-row {
+        grid-template-columns: 1fr;
+      }
+      .portal {
+        height: 72svh;
+        min-height: 500px;
+      }
+    }
+
     @media (max-width:768px) {
       nav { padding:20px 24px; }
       nav.scrolled { padding:16px 24px; }
@@ -176,6 +193,7 @@
       .hero-scroll { right:24px; }
       .portal-content { padding:0 24px 40px; }
       .portal-index { top:28px; right:24px; }
+      .portal { height: 68svh; min-height: 440px; }
       footer { padding:24px 20px; flex-direction:column; gap:12px; }
     }
   </style>
@@ -186,20 +204,18 @@
   <div id="cursor-dot"></div>
   <div id="cursor-ring"></div>
 
-  <!-- ═══ NAV ════════════════════════════════════════════════════ -->
   <nav id="navbar">
-    <span class="nav-logo">Lou Shoot</span>
+    <span class="nav-logo">LouShoot</span>
     <span class="nav-index">Portfolio</span>
   </nav>
 
-  <!-- ═══ HERO ════════════════════════════════════════════════════ -->
   <section id="hero">
     <video class="hero-bg" autoplay muted loop playsinline preload="auto">
       <source src="assets/hero/BANNIERE.mp4" type="video/mp4" />
     </video>
     <div class="hero-vignette"></div>
     <div class="hero-content">
-      <span class="hero-name reveal">Lou<br/>Shoot</span>
+      <span class="hero-name reveal">LouShoot</span>
       <p class="hero-sub reveal rd2">Photography &nbsp;·&nbsp; Art Direction</p>
     </div>
     <div class="hero-scroll">
@@ -208,62 +224,60 @@
     </div>
   </section>
 
-  <!-- ═══ PORTAL — BRAND ══════════════════════════════════════════ -->
-  <a href="brand.html" class="portal" id="portal-brand">
-    <video class="portal-media" autoplay muted loop playsinline preload="auto">
-      <source src="assets/sections/brand/section-entry/Couv.MOV" />
-    </video>
+  <section class="portal-row">
+    <a href="brand.html" class="portal" id="portal-brand">
+      <video class="portal-media" autoplay muted loop playsinline preload="auto">
+        <source src="assets/sections/brand/section-entry/Couv.MOV" />
+      </video>
 
-    <div class="portal-overlay"></div>
-    <span class="portal-index">01 / 03</span>
-    <div class="portal-content">
-      <div>
-        <span class="portal-num">Brand</span>
-        <h2 class="portal-title">Brand</h2>
+      <div class="portal-overlay"></div>
+      <span class="portal-index">01 / 03</span>
+      <div class="portal-content">
+        <div>
+          <span class="portal-num">Brand</span>
+          <h2 class="portal-title">Brand</h2>
+        </div>
+        <span class="portal-enter">Enter &nbsp;→</span>
       </div>
-      <span class="portal-enter">Enter &nbsp;→</span>
-    </div>
-  </a>
+    </a>
 
-  <!-- ═══ PORTAL — EDITORIAL ══════════════════════════════════════ -->
-  <a href="editorial.html" class="portal" id="portal-editorial">
-    <video class="portal-media" autoplay muted loop playsinline preload="auto">
-      <source src="assets/sections/editorial/section-entry/COUVERTURE.MP4" type="video/mp4" />
-    </video>
+    <a href="editorial.html" class="portal" id="portal-editorial">
+      <video class="portal-media" autoplay muted loop playsinline preload="auto">
+        <source src="assets/sections/editorial/section-entry/COUVERTURE.MP4" type="video/mp4" />
+      </video>
 
-    <div class="portal-overlay"></div>
-    <span class="portal-index">02 / 03</span>
-    <div class="portal-content">
-      <div>
-        <span class="portal-num">Editorial</span>
-        <h2 class="portal-title">Editorial</h2>
+      <div class="portal-overlay"></div>
+      <span class="portal-index">02 / 03</span>
+      <div class="portal-content">
+        <div>
+          <span class="portal-num">Editorial</span>
+          <h2 class="portal-title">Editorial</h2>
+        </div>
+        <span class="portal-enter">Enter &nbsp;→</span>
       </div>
-      <span class="portal-enter">Enter &nbsp;→</span>
-    </div>
-  </a>
+    </a>
 
-  <!-- ═══ PORTAL — CONTACT ════════════════════════════════════════ -->
-  <a href="contact.html" class="portal" id="portal-contact">
-    <img class="portal-media" src="assets/sections/contact/section-entry/COUV%20.jpg" alt="Contact" />
+    <a href="contact.html" class="portal" id="portal-contact">
+      <img class="portal-media" src="assets/sections/contact/section-entry/COUV%20.jpg" alt="Contact" />
 
-    <div class="portal-overlay"></div>
-    <span class="portal-index">03 / 03</span>
-    <div class="portal-content">
-      <div>
-        <span class="portal-num">Contact</span>
-        <h2 class="portal-title">Contact</h2>
+      <div class="portal-overlay"></div>
+      <span class="portal-index">03 / 03</span>
+      <div class="portal-content">
+        <div>
+          <span class="portal-num">Contact</span>
+          <h2 class="portal-title">Contact</h2>
+        </div>
+        <span class="portal-enter">Enter &nbsp;→</span>
       </div>
-      <span class="portal-enter">Enter &nbsp;→</span>
-    </div>
-  </a>
+    </a>
+  </section>
 
   <footer>
-    <span class="ft-logo">Lou Shoot</span>
+    <span class="ft-logo">LouShoot</span>
     <span class="ft-copy">© 2025 — All rights reserved</span>
   </footer>
 
   <script>
-    /* Cursor */
     const dot=document.getElementById('cursor-dot'), ring=document.getElementById('cursor-ring');
     let mx=0,my=0,rx=0,ry=0;
     document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
@@ -272,9 +286,7 @@
       el.addEventListener('mouseenter',()=>document.body.classList.add('ch'));
       el.addEventListener('mouseleave',()=>document.body.classList.remove('ch'));
     });
-    /* Nav scroll */
     window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',scrollY>60),{passive:true});
-    /* Reveal hero */
     const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('v');obs.unobserve(x.target);}}),{threshold:.1});
     document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
     window.addEventListener('load',()=>document.querySelectorAll('#hero .reveal').forEach(el=>el.classList.add('v')));

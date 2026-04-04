@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Editorial — Lou Shoot</title>
+  <title>Editorial — LouShoot</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Syne:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -29,7 +29,6 @@
     .section-h1{font-family:var(--serif);font-size:clamp(48px,7vw,90px);font-weight:300;letter-spacing:.05em;line-height:.92;color:var(--white)}
     .section-desc{margin-top:28px;font-family:var(--serif);font-size:clamp(14px,1.3vw,17px);font-weight:300;font-style:italic;line-height:1.75;color:var(--white-dim);max-width:480px}
 
-    /* Featured + grid layout */
     .ed-featured{display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:0 3px 3px}
     .ed-feat-cover{position:relative;overflow:hidden;display:block;text-decoration:none;cursor:none;background:var(--dark);aspect-ratio:3/4}
     .ed-feat-cover img,.ed-feat-cover .ph{width:100%;height:100%;object-fit:cover;display:block;background:var(--surface);transition:transform 1.2s var(--ease)}
@@ -40,12 +39,10 @@
     .ed-feat-desc{font-family:var(--serif);font-size:14px;font-weight:300;font-style:italic;line-height:1.75;color:var(--white-dim);max-width:360px}
     .ed-feat-cta{display:block;text-decoration:none;cursor:none}
 
-    /* Arrow line hint — replaces any text CTA */
     .ed-feat-arrow{margin-top:28px;display:inline-flex;align-items:center;gap:12px;font-family:var(--sans);font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:var(--white);opacity:0;transform:translateX(-6px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
     .ed-feat-cover:hover ~ .ed-feat-text .ed-feat-arrow,
     .ed-featured:hover .ed-feat-arrow{opacity:1;transform:translateX(0)}
 
-    /* Secondary 3-col grid */
     .ed-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;padding:0 3px 3px}
     .proj-cover{position:relative;aspect-ratio:3/4;overflow:hidden;display:block;text-decoration:none;cursor:none;background:var(--dark)}
     .proj-cover:nth-child(2){margin-top:60px}
@@ -82,7 +79,7 @@
   <div id="cursor-ring"></div>
 
   <nav id="navbar">
-    <a href="index.html" class="nav-logo">Lou Shoot</a>
+    <a href="index.html" class="nav-logo">LouShoot</a>
     <a href="index.html" class="nav-back">
       <svg width="20" height="8" viewBox="0 0 20 8" fill="none"><line x1="20" y1="4" x2="3" y2="4" stroke="currentColor" stroke-width=".8"/><polyline points="6,1 1,4 6,7" fill="none" stroke="currentColor" stroke-width=".8"/></svg>
       Home
@@ -95,7 +92,6 @@
     <p class="section-desc reveal rd2">Series, narratives and visual atmospheres — where each image builds a world.</p>
   </div>
 
-  <!-- ═══ FEATURED — Enzomnia ════════════════════════════════════ -->
   <div class="ed-featured">
     <a href="editorial/enzomnia-someone-else.html" class="ed-feat-cover reveal rd1">
       <img src="assets/sections/editorial/enzomnia-someone-else/Couv.jpg" alt="Enzomnia — Someone Else" />
@@ -115,9 +111,7 @@
     </div>
   </div>
 
-  <!-- ═══ SECONDARY GRID ══════════════════════════════════════════ -->
   <div class="ed-grid">
-
     <a href="editorial/goji-roots-signal.html" class="proj-cover reveal rd1">
       <img src="assets/sections/editorial/goji-roots-signal/COUV.jpg" alt="Goji Roots Signal" />
       <div class="proj-meta">
@@ -141,11 +135,10 @@
         <div class="proj-tag">Editorial &nbsp;·&nbsp; Series</div>
       </div>
     </a>
-
   </div>
 
   <footer>
-    <span class="ft-logo">Lou Shoot</span>
+    <span class="ft-logo">LouShoot</span>
     <span class="ft-copy">© 2025 — All rights reserved</span>
   </footer>
 

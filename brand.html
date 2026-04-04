@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brand — Lou Shoot</title>
+  <title>Brand — LouShoot</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Syne:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -25,23 +25,19 @@
     body.ch #cursor-dot  { width:7px; height:7px; background:var(--accent); }
     body.ch #cursor-ring { width:52px; height:52px; border-color:rgba(194,168,130,.45); }
 
-    /* Nav */
     nav { position:fixed; top:0; left:0; right:0; z-index:800; display:flex; align-items:center; justify-content:space-between; padding:28px 48px; transition:padding .6s var(--ease); }
     nav.scrolled { padding:20px 48px; background:rgba(8,8,8,.88); backdrop-filter:blur(14px); border-bottom:1px solid rgba(42,42,42,.5); }
     .nav-logo { font-family:var(--serif); font-weight:300; font-size:16px; letter-spacing:.25em; text-transform:uppercase; color:var(--white); text-decoration:none; cursor:none; }
     .nav-back { font-family:var(--sans); font-size:9px; letter-spacing:.28em; text-transform:uppercase; color:var(--white-dim); text-decoration:none; cursor:none; display:flex; align-items:center; gap:10px; transition:color .4s; }
     .nav-back:hover { color:var(--white); }
 
-    /* Section header */
     .section-intro { padding:160px 48px 80px; }
     .section-eyebrow { font-family:var(--sans); font-size:9px; letter-spacing:.35em; text-transform:uppercase; color:var(--grey); margin-bottom:20px; display:block; }
     .section-h1 { font-family:var(--serif); font-size:clamp(48px,7vw,90px); font-weight:300; letter-spacing:.05em; line-height:.92; color:var(--white); }
     .section-desc { margin-top:28px; font-family:var(--serif); font-size:clamp(14px,1.3vw,17px); font-weight:300; font-style:italic; line-height:1.75; color:var(--white-dim); max-width:480px; }
 
-    /* Project grid */
     .proj-grid { padding:0 3px 3px; display:grid; grid-template-columns:repeat(2,1fr); gap:3px; }
 
-    /* Each project cover = clickable CTA */
     .proj-cover {
       position:relative; aspect-ratio:4/5; overflow:hidden;
       display:block; text-decoration:none; cursor:none;
@@ -50,7 +46,6 @@
     .proj-cover:nth-child(3) { margin-top:-80px; }
     .proj-cover:nth-child(4) { margin-top:80px; }
 
-    /* Full-width last item */
     .proj-cover.full { grid-column:span 2; aspect-ratio:unset; height:500px; margin-top:0 !important; }
 
     .proj-cover img, .proj-cover .ph {
@@ -71,12 +66,10 @@
     .proj-tag  { font-family:var(--sans); font-size:9px; letter-spacing:.28em; text-transform:uppercase; color:var(--accent); margin-top:6px; opacity:0; transform:translateY(6px); transition:opacity .55s var(--ease) .05s,transform .55s var(--ease) .05s; }
     .proj-cover:hover .proj-tag { opacity:1; transform:translateY(0); }
 
-    /* Reveal */
     .reveal { opacity:0; transform:translateY(24px); transition:opacity .9s var(--ease-out),transform .9s var(--ease-out); }
     .reveal.v { opacity:1; transform:translateY(0); }
     .rd1{transition-delay:.1s} .rd2{transition-delay:.2s} .rd3{transition-delay:.3s} .rd4{transition-delay:.4s} .rd5{transition-delay:.5s}
 
-    /* Footer */
     footer { padding:28px 48px; display:flex; align-items:center; justify-content:space-between; border-top:1px solid var(--line); margin-top:3px; }
     .ft-logo { font-family:var(--serif); font-weight:300; font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:var(--grey); }
     .ft-copy { font-family:var(--sans); font-size:9px; letter-spacing:.18em; color:var(--grey); }
@@ -97,24 +90,20 @@
   <div id="cursor-ring"></div>
 
   <nav id="navbar">
-    <a href="index.html" class="nav-logo">Lou Shoot</a>
+    <a href="index.html" class="nav-logo">LouShoot</a>
     <a href="index.html" class="nav-back">
       <svg width="20" height="8" viewBox="0 0 20 8" fill="none"><line x1="20" y1="4" x2="3" y2="4" stroke="currentColor" stroke-width=".8"/><polyline points="6,1 1,4 6,7" fill="none" stroke="currentColor" stroke-width=".8"/></svg>
       Home
     </a>
   </nav>
 
-  <!-- Section header -->
   <div class="section-intro">
     <span class="section-eyebrow reveal">01 — Brand</span>
     <h1 class="section-h1 reveal rd1">Brand</h1>
     <p class="section-desc reveal rd2">Visual campaigns, lookbooks and editorial work for brands — where identity meets image.</p>
   </div>
 
-  <!-- ═══ PROJECT COVERS — each image is the CTA ══════════════════ -->
   <div class="proj-grid">
-
-    <!-- YYB -->
     <a href="brand/yyb.html" class="proj-cover reveal rd1">
       <img src="assets/sections/brand/yyb/COUV.jpg" alt="YYB" />
       <div class="proj-meta">
@@ -123,7 +112,6 @@
       </div>
     </a>
 
-    <!-- Fetcha -->
     <a href="brand/fetcha.html" class="proj-cover reveal rd2">
       <img src="assets/sections/brand/fetcha/Couv.jpg" alt="Fetcha" />
       <div class="proj-meta">
@@ -132,7 +120,6 @@
       </div>
     </a>
 
-    <!-- Dedictd -->
     <a href="brand/dedictd.html" class="proj-cover reveal rd3">
       <img src="assets/sections/brand/dedictd/couv.jpg" alt="Dedictd" />
       <div class="proj-meta">
@@ -141,7 +128,6 @@
       </div>
     </a>
 
-    <!-- Cinq Visages -->
     <a href="brand/cinq-visages.html" class="proj-cover reveal rd4">
       <img src="assets/sections/brand/cinq-visages/Couverture.jpg" alt="Cinq Visages" />
       <div class="proj-meta">
@@ -150,7 +136,6 @@
       </div>
     </a>
 
-    <!-- Jamais Nue — full width -->
     <a href="brand/jamais-nue.html" class="proj-cover full reveal rd5">
       <img src="assets/sections/brand/jamais-nue/COUV.jpg" alt="Jamais Nue" />
       <div class="proj-meta">
@@ -158,11 +143,10 @@
         <div class="proj-tag">Campaign &nbsp;·&nbsp; Brand</div>
       </div>
     </a>
-
   </div>
 
   <footer>
-    <span class="ft-logo">Lou Shoot</span>
+    <span class="ft-logo">LouShoot</span>
     <span class="ft-copy">© 2025 — All rights reserved</span>
   </footer>
 
